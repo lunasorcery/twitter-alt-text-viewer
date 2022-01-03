@@ -1,0 +1,118 @@
+/* ==UserStyle==
+@name           Twitter Alt-Text Viewer
+@description    Make alt-text visible on Twitter web
+@namespace      https://github.com/lunasorcery
+@version        1.0.0
+@author         lunasorcery
+@license        MIT
+==/UserStyle== */
+
+
+
+/* IMPORTANT NOTE:
+This userstyle only works if your Twitter UI language is set to English.
+Images without alt-text are given a placeholder alt-text of "Image" by Twitter,
+but this gets localized if you're using Twitter in a different language.
+It should be possible to fix this by finding out what the localized placeholder is for your language,
+and replacing all instances of "Image" in this userstyle with that.
+*/
+
+
+
+@-moz-document domain("twitter.com") {
+
+
+    /* ==== colored border indicates whether alt-text is present or not ==== */
+    :root {
+        /* options */
+        --alt-text-border-thickness-present: 4px;
+        --alt-text-border-thickness-missing: 4px;
+        --alt-text-border-color-present: rgb(29,161,242);
+        --alt-text-border-color-missing: rgb(224,36,94);
+    }
+    /* setup for all images in the timeline with an aria-label */
+    div[data-testid="tweetPhoto"][aria-label] {
+        margin: 0 !important; /* required to reset twitter's cropping offset */
+        border-radius: 15px;
+        border-style: solid;
+        border-width: var(--alt-text-border-thickness-missing);
+        border-color: var(--alt-text-border-color-missing);
+    }
+    /* only show positively if the aria-label isn't "Image" */
+    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]) {
+        border-width: var(--alt-text-border-thickness-present);
+        border-color: var(--alt-text-border-color-present);
+    }
+
+
+
+    /* ==== corner icon indicates whether alt-text is present or not ==== */
+    :root {
+        /* options */
+        --alt-text-icon-background-present: rgb(29,161,242);
+        --alt-text-icon-background-missing: rgb(224,36,94);
+        --alt-text-icon-text-color-present: #fff;
+        --alt-text-icon-text-color-missing: #fff;
+        --alt-text-icon-text-size: 10pt;
+    }
+    /* setup for all images with an aria-label, including images in fullscreen */
+    div[data-testid="tweetPhoto"][aria-label]:after,
+    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>ul>li>div>div>div>div[aria-label]:after,
+    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>div>div[aria-label]:not([role]):after {
+        content: "✕ ALT";
+        background: var(--alt-text-icon-background-missing);
+        color: var(--alt-text-icon-text-color-missing);
+        border-radius: 6px;
+        padding: 3px 5px;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        font-family: sans-serif;
+        font-size: var(--alt-text-icon-text-size);
+        font-weight: bold;
+    }
+    /* only show positively if the aria-label isn't "Image" */
+    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]):after,
+    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>ul>li>div>div>div>div[aria-label]:not([aria-label="Image"]):after,
+    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>div>div[aria-label]:not([aria-label="Image"]):not([role]):after {
+        content: "✓ ALT";
+        background: var(--alt-text-icon-background-present);
+        color: var(--alt-text-icon-text-color-present);
+    }
+    /* also hide twitter's self-alt icon */
+    div[aria-describedby^="id__"][role="button"] {
+        display: none;
+    }
+
+
+
+    /* ==== text overlay on hover shows the actual alt-text ==== */
+    :root {
+        /* options */
+        --alt-text-overlay-background: #fff;
+        --alt-text-overlay-text-color: #000;
+        --alt-text-overlay-text-size: 12pt;
+        --alt-text-overlay-width: 500px;
+    }
+    div[data-testid="tweetPhoto"][aria-label] {
+        margin: 0 !important; /* required to reset twitter's cropping offset */
+    }
+    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]):hover:after,
+    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>ul>li>div>div>div>div[aria-label]:not([aria-label="Image"]):hover:after,
+    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>div>div[aria-label]:not([aria-label="Image"]):not([role]):hover:after {
+        content: attr(aria-label);
+        background: var(--alt-text-overlay-background);
+        color: var(--alt-text-overlay-text-color);
+        border-radius: 0;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        max-width: var(--alt-text-overlay-width);
+        padding: 10px;
+        white-space: pre-wrap; /* ensure newlines are preserved */
+        font-family: sans-serif;
+        font-size: var(--alt-text-overlay-text-size);
+        font-weight: normal;
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+    }
+}
