@@ -9,7 +9,7 @@ A set of custom CSS rules to make alt-text visible on Twitter's desktop web inte
 <img src="docs/screenshot-icons.png" width="598px" alt="Screenshot showing a tweet with two images. One has a blue border and a blue icon in the corner saying '✓ ALT', the other has a red border and a red icon in the corner saying '✕ ALT'." />
 
 #### Visible alt-text on mouse-over:
-<img src="docs/screenshot-overlay.png" width="598px" height="395px" alt="Screenshot showing a tweet with one image. The mouse cursor is hovering over the image, and the alt-text for the image is displayed in an overlay." />
+<img src="docs/screenshot-overlay.png" width="598px" alt="Screenshot showing a tweet with one image. The mouse cursor is hovering over the image, and the alt-text for the image is displayed in an overlay." />
 
 ## Installation
 
@@ -27,17 +27,17 @@ There's also the popular **Stylish**, but there are [compelling reasons against 
 
 With Stylus installed, click the above button, and the extension will open a new tab prompting you to add the style.
 
-<img src="docs/stylus-add.png" width="422px" height="167px" alt="Screenshot showing Stylus's UI for adding a new style" />
+<img src="docs/stylus-add.png" width="422px" alt="Screenshot showing Stylus's UI for adding a new style" />
 
 Then, click the "Install style" button on the left, and you're all set!
 
 #### Using UserScripts (Safari)
 
-<img src="docs/userscripts-safari-open.png" width="354px" height="151px" alt="Screenshot showing how to open UserScripts's settings panel">
+<img src="docs/userscripts-safari-open.png" width="354px" alt="Screenshot showing how to open UserScripts's settings panel">
 
 Click the UserScripts icon in the window bar, and press "Open" to launch its settings panel.
 
-<img src="docs/userscripts-safari-add.png" width="493px" height="194px" alt="Screenshot showing how to add a new style in UserScripts">
+<img src="docs/userscripts-safari-add.png" width="493px" alt="Screenshot showing how to add a new style in UserScripts">
 
 Click the "+" button, then "New Remote". When prompted for a URL, paste in the following:
 
