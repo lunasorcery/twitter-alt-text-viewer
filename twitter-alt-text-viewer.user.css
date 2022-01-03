@@ -79,7 +79,9 @@ and replacing all instances of "Image" in this userstyle with that.
         background: var(--alt-text-icon-background-present);
         color: var(--alt-text-icon-text-color-present);
     }
-    /* also hide twitter's self-alt icon */
+    /* also hide twitter's self-alt icon. */
+    /* this rule is a little clumsy and might hide other parts of the UI too. */
+    /* I'd like to find a better way to do this. */
     div[aria-describedby^="id__"][role="button"] {
         display: none;
     }
