@@ -24,7 +24,11 @@ There's also the popular **Stylish**, but there are [compelling reasons against 
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/lunasorcery/twitter-alt-text-viewer/main/twitter-alt-text-viewer.user.css)
 
-With Stylus installed, click the above button, and the extension will open a new tab prompting you to add the style. Then, click the "Install style" button on the left, and you're all set!
+With Stylus installed, click the above button, and the extension will open a new tab prompting you to add the style.
+
+![](docs/stylus-add.png)
+
+Then, click the "Install style" button on the left, and you're all set!
 
 #### Using UserScripts (Safari)
 
