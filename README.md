@@ -47,4 +47,6 @@ When prompted for a URL, paste in the following:
 https://raw.githubusercontent.com/lunasorcery/twitter-alt-text-viewer/main/twitter-alt-text-viewer.user.css
 ```
 
-The extension will import the style, but _make sure to hit the "Save" button in the bottom-right of the screen_. Now you're all set!
+Unfortunately, there are some small compatibility issues (see #1) and the style won't quite work out-of-the-box — you'll need to make some manual tweaks:
+
+You'll need to add `@include  https://twitter.com/*` to the block at the top of the file. You'll also need to remove the `@-moz-document` line, as well as the very last `}` in the file. Once you're done, don't forget to hit "Save" the bottom-right, and you should be all set!
