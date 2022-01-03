@@ -25,7 +25,7 @@ There's also the popular **Stylish**, but there are [compelling reasons against 
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/lunasorcery/twitter-alt-text-viewer/main/twitter-alt-text-viewer.user.css)
 
-With Stylus installed, click the above button, and the extension will open a new tab prompting you to add the style.
+With Stylus installed, click the above button, and the extension will open a new tab prompting you to add the style:
 
 <img src="docs/stylus-add.png" width="422px" alt="Screenshot showing Stylus's UI for adding a new style" />
 
@@ -33,16 +33,18 @@ Then, click the "Install style" button on the left, and you're all set!
 
 #### Using UserScripts (Safari)
 
+Click the UserScripts icon in the window bar, and press "Open" to launch its settings panel.
+
 <img src="docs/userscripts-safari-open.png" width="354px" alt="Screenshot showing how to open UserScripts's settings panel">
 
-Click the UserScripts icon in the window bar, and press "Open" to launch its settings panel.
+Click the "+" button, then "New Remote".
 
 <img src="docs/userscripts-safari-add.png" width="493px" alt="Screenshot showing how to add a new style in UserScripts">
 
-Click the "+" button, then "New Remote". When prompted for a URL, paste in the following:
+When prompted for a URL, paste in the following:
 
 ```
 https://raw.githubusercontent.com/lunasorcery/twitter-alt-text-viewer/main/twitter-alt-text-viewer.user.css
 ```
 
-The extension will import the style, but _make sure to hit the "Save" button in the bottom-right of the screen_.
+The extension will import the style, but _make sure to hit the "Save" button in the bottom-right of the screen_. Now you're all set!
