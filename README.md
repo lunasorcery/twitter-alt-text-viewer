@@ -6,7 +6,7 @@ A set of custom CSS rules to make alt-text visible on Twitter's desktop web inte
 
 #### Clear indicators for whether an image has alt-text or not:
 
-<img src="docs/screenshot-icons.png" width="598px" height="415px" alt="Screenshot showing a tweet with two images. One has a blue border and a blue icon in the corner saying '✓ ALT', the other has a red border and a red icon in the corner saying '✕ ALT'." />
+<img src="docs/screenshot-icons.png" width="598px" alt="Screenshot showing a tweet with two images. One has a blue border and a blue icon in the corner saying '✓ ALT', the other has a red border and a red icon in the corner saying '✕ ALT'." />
 
 #### Visible alt-text on mouse-over:
 <img src="docs/screenshot-overlay.png" width="598px" height="395px" alt="Screenshot showing a tweet with one image. The mouse cursor is hovering over the image, and the alt-text for the image is displayed in an overlay." />
