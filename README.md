@@ -11,6 +11,13 @@ A set of custom CSS rules to make alt-text visible on Twitter's desktop web inte
 #### Visible alt-text on mouse-over:
 <img src="docs/screenshot-overlay.png" width="598px" alt="Screenshot showing a tweet with one image. The mouse cursor is hovering over the image, and the alt-text for the image is displayed in an overlay." />
 
+## Important Note
+
+This userstyle _only_ works if your Twitter UI language is set to English.
+Images without alt-text are given a placeholder alt-text of "Image" by Twitter, but this is localized if you're using Twitter in a different language.
+
+However, it should be possible to adapt the style by finding out what the localized placeholder is for your language, and replacing all instances of "Image" in the CSS with that.
+
 ## Installation
 
 ### Step 1: Install a browser extension to inject custom CSS
