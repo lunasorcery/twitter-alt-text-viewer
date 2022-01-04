@@ -15,9 +15,13 @@ A set of custom CSS rules to make alt-text visible on Twitter's desktop web inte
 
 ### Step 1: Install a browser extension to inject custom CSS
 
-There are several available, but I'm personally partial to [Stylus](https://github.com/openstyles/stylus) (Chrome/Firefox/Opera) and [UserScripts](https://apps.apple.com/us/app/userscripts/id1463298887) (Safari).
+This style works best with [Stylus](https://github.com/openstyles/stylus) (Chrome/Firefox/Opera).
 
-There's also the popular **Stylish**, but there are [compelling reasons against using it](https://robertheaton.com/2018/08/16/stylish-is-back-and-you-still-shouldnt-use-it/) — Stylus was created as a safer alternative after that fiasco.
+For macOS Safari, [Cascadea](https://cascadea.app/) is compatible out-of-the-box, but costs a few dollars.
+
+[UserScripts](https://apps.apple.com/us/app/userscripts/id1463298887) is a free alternative for Safari, but the style requires some manual tweaking to work.
+
+There's also the popular **Stylish** (Chrome/Firefox/Opera), but there are [compelling reasons against using it](https://robertheaton.com/2018/08/16/stylish-is-back-and-you-still-shouldnt-use-it/) — Stylus was created as a safer alternative after that fiasco.
 
 ### Step 2: Install the custom CSS
 
@@ -31,9 +35,19 @@ With Stylus installed, click the above button, and the extension will open a new
 
 Then, click the "Install style" button on the left, and you're all set!
 
-#### Using UserScripts (Safari)
+#### Using Cascadea
 
-Click the UserScripts icon in the window bar, and press "Open" to launch its settings panel.
+[![Install directly with Cascadea](https://img.shields.io/badge/Install%20directly%20with-Cascadea-387ed6.svg)](https://raw.githubusercontent.com/lunasorcery/twitter-alt-text-viewer/main/twitter-alt-text-viewer.user.css)
+
+With Cascadea installed, click the above button, and the extension will prompt you to add the style:
+
+<img src="docs/cascadea-add.png" width="260px" alt="Screenshot of Cascadea's prompt asking the user if they want to install the style.">
+
+Click "Yes", and you're all set!
+
+#### Using UserScripts
+
+Click the UserScripts icon in the Safari window bar, and press "Open" to launch its settings panel.
 
 <img src="docs/userscripts-safari-open.png" width="354px" alt="Screenshot showing how to open UserScripts's settings panel">
 
@@ -47,6 +61,6 @@ When prompted for a URL, paste in the following:
 https://raw.githubusercontent.com/lunasorcery/twitter-alt-text-viewer/main/twitter-alt-text-viewer.user.css
 ```
 
-Unfortunately, there are some small compatibility issues (see #1) and the style won't quite work out-of-the-box — you'll need to make some manual tweaks:
+Unfortunately, there are some small compatibility issues, and the style won't quite work out-of-the-box — you'll need to make some manual tweaks:
 
 You'll need to add `@include  https://twitter.com/*` to the block at the top of the file. You'll also need to remove the `@-moz-document` line, as well as the very last `}` in the file. Once you're done, don't forget to hit "Save" the bottom-right, and you should be all set!
