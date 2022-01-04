@@ -17,7 +17,7 @@ A set of custom CSS rules to make alt-text visible on Twitter's desktop web inte
 
 This style works best with [Stylus](https://github.com/openstyles/stylus) (Chrome/Firefox/Opera).
 
-For macOS Safari, [Cascadea](https://cascadea.app/) is compatible out-of-the-box, but costs a few dollars.
+For macOS Safari, [Cascadea](https://cascadea.app/) is compatible out-of-the-box.
 
 [UserScripts](https://apps.apple.com/us/app/userscripts/id1463298887) is a free alternative for Safari, but the style requires some manual tweaking to work.
 
