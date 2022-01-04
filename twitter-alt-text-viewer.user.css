@@ -10,7 +10,7 @@
 
 
 /* IMPORTANT NOTE:
-This userstyle only works if your Twitter UI language is set to English.
+This userstyle only works if your Twitter UI language is set to English or Italian.
 Images without alt-text are given a placeholder alt-text of "Image" by Twitter,
 but this gets localized if you're using Twitter in a different language.
 It should be possible to fix this by finding out what the localized placeholder is for your language,
@@ -39,7 +39,7 @@ and replacing all instances of "Image" in this userstyle with that.
         border-color: var(--alt-text-border-color-missing);
     }
     /* only show positively if the aria-label isn't "Image" */
-    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]) {
+    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]):not([aria-label="Immagine"]) {
         border-width: var(--alt-text-border-thickness-present);
         border-color: var(--alt-text-border-color-present);
     }
@@ -72,9 +72,9 @@ and replacing all instances of "Image" in this userstyle with that.
         font-weight: bold;
     }
     /* only show positively if the aria-label isn't "Image" */
-    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]):after,
-    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>ul>li>div>div>div>div[aria-label]:not([aria-label="Image"]):after,
-    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>div>div[aria-label]:not([aria-label="Image"]):not([role]):after {
+    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]):not([aria-label="Immagine"]):after,
+    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>ul>li>div>div>div>div[aria-label]:not([aria-label="Image"]):not([aria-label="Immagine"]):after,
+    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>div>div[aria-label]:not([aria-label="Image"]):not([aria-label="Immagine"]):not([role]):after {
         content: "✓ ALT";
         background: var(--alt-text-icon-background-present);
         color: var(--alt-text-icon-text-color-present);
@@ -99,9 +99,9 @@ and replacing all instances of "Image" in this userstyle with that.
     div[data-testid="tweetPhoto"][aria-label] {
         margin: 0 !important; /* required to reset twitter's cropping offset */
     }
-    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]):hover:after,
-    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>ul>li>div>div>div>div[aria-label]:not([aria-label="Image"]):hover:after,
-    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>div>div[aria-label]:not([aria-label="Image"]):not([role]):hover:after {
+    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]):not([aria-label="Immagine"]):hover:after,
+    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>ul>li>div>div>div>div[aria-label]:not([aria-label="Image"]):not([aria-label="Immagine"]):hover:after,
+    div[aria-labelledby="modal-header"]>div>div:not([aria-expanded])>div>div>div>div>div>div[aria-label]:not([aria-label="Image"]):not([aria-label="Immagine"]):not([role]):hover:after {
         content: attr(aria-label);
         background: var(--alt-text-overlay-background);
         color: var(--alt-text-overlay-text-color);
