@@ -82,7 +82,7 @@ and replacing all instances of "Image" in this userstyle with that.
     /* also hide twitter's self-alt icon. */
     /* this rule is a little clumsy and might hide other parts of the UI too. */
     /* I'd like to find a better way to do this. */
-    div[aria-describedby^="id__"][role="button"] {
+    [data-testid="tweet"] div[aria-describedby^="id__"][role="button"] {
         display: none;
     }
 
