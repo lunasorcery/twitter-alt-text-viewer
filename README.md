@@ -9,11 +9,12 @@ A set of custom CSS rules to make alt-text visible on Twitter's desktop web inte
 <img src="docs/screenshot-icons.png" width="598px" alt="Screenshot showing a tweet with two images. One has a blue border and a blue icon in the corner saying '✓ ALT', the other has a red border and a red icon in the corner saying '✕ ALT'." />
 
 #### Visible alt-text on mouse-over:
+
 <img src="docs/screenshot-overlay.png" width="598px" alt="Screenshot showing a tweet with one image. The mouse cursor is hovering over the image, and the alt-text for the image is displayed in an overlay." />
 
 ## Important Note
 
-This userstyle _only_ works if your Twitter UI language is set to English.
+This userstyle _only_ works if your Twitter UI language is set to English or Italian.
 Images without alt-text are given a placeholder alt-text of "Image" by Twitter, but this is localized if you're using Twitter in a different language.
 
 However, it should be possible to adapt the style by finding out what the localized placeholder is for your language, and replacing all instances of "Image" in the CSS with that.
@@ -70,4 +71,4 @@ https://raw.githubusercontent.com/lunasorcery/twitter-alt-text-viewer/main/twitt
 
 Unfortunately, there are some small compatibility issues, and the style won't quite work out-of-the-box — you'll need to make some manual tweaks:
 
-You'll need to add `@include  https://twitter.com/*` to the block at the top of the file. You'll also need to remove the `@-moz-document` line, as well as the very last `}` in the file. Once you're done, don't forget to hit "Save" the bottom-right, and you should be all set!
+You'll need to add `@include https://twitter.com/*` to the block at the top of the file. You'll also need to remove the `@-moz-document` line, as well as the very last `}` in the file. Once you're done, don't forget to hit "Save" the bottom-right, and you should be all set!
