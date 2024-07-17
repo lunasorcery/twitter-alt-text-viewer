@@ -13,10 +13,12 @@ A set of custom CSS rules to make alt-text visible on Twitter's desktop web inte
 
 ## Important Note
 
-This userstyle _only_ works if your Twitter UI language is set to English.
-Images without alt-text are given a placeholder alt-text of "Image" by Twitter, but this is localized if you're using Twitter in a different language.
+Configuration needed if your Twitter UI language isn't set to English.
 
-However, it should be possible to adapt the style by finding out what the localized placeholder is for your language, and replacing all instances of "Image" in the CSS with that.
+Images without alt-text are given a placeholder alt-text of "Image" by Twitter,
+but this is localized if you're using Twitter in a different language.
+For example, the placeholder becomes "Immagine" in Italian, or "圖片" in Traditional Chinese.
+As a result, you should set the "alt-text placeholder" to the one in your language, for this style to work.
 
 ## Installation
 
